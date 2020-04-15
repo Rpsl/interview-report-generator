@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "browserify": "^16.5.1",
+    "form-storage": "^1.3.3",
+    "github-markdown-css": "^4.0.0",
+    "gulp": "^4.0.2",
+    "handlebars": "^4.7.6",
+    "jquery": "^3.5.0",
+    "jquery-serializetojson": "^1.4.1",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  },
+  "scripts": {
+    "build": "node_modules/.bin/gulp"
+  }
+}
