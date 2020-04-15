@@ -15,12 +15,12 @@
     <div class="container">
         <article class="markdown-body entry-content" itemprop="text"><h1>{{report.candidate}}</h1>
             <p>Собеседование проводили: <strong>{{report.who_talks}}</strong></p>
-            <p>Смотрим на позицию: <strong>{{#if report.position}}report.position{{/if}}</strong></p>
+            <p>Смотрим на позицию: <strong>{{#if report.position}}{{report.position}}{{/if}}</strong></p>
             <hr>
             <h3>Hard Skills:</h3>
             
             {{#each report.hard-skills}}
-                <p><strong>Что проверял:</strong> {{this.what}} {{#if this.positive}}🟢{{else}}🔴{{/if}}</p>
+                <p><strong>Что проверял:</strong> {{this.what}} {{#if this.positive}}🟢{{/if}}{{#if this.negative}}🔴{{/if}}</p>
                 <p><strong>Как проверял:</strong></p>
                 <p style="padding-left: 2em;">{{this.how}}</p>
             {{/each}}
@@ -28,7 +28,7 @@
             <h3>Soft Skills:</h3>
             
             {{#each report.soft-skills}}
-                <p><strong>Что проверял:</strong> {{this.what}} {{#if this.positive}}🟢{{else}}🔴{{/if}}</p>
+                <p><strong>Что проверял:</strong> {{this.what}} {{#if this.positive}}🟢{{/if}}{{#if this.negative}}🔴{{/if}}</p>
                 <p><strong>Как проверял:</strong></p>
                 <p style="padding-left: 2em;">{{this.how}}</p>
             {{/each}}

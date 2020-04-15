@@ -81,6 +81,10 @@ function getReportObject(form) {
             v.positive = true;
         }
 
+        if (v.result === "negative") {
+            v.negative = true;
+        }
+
         if (k.substr(0, 4) === 'hard') {
             hardskills.push(v);
         } else {
@@ -90,7 +94,7 @@ function getReportObject(form) {
 
     report = {
         "candidate": data.name,
-        "who-talks": data.who_talks,
+        "who_talks": data.who_talks,
         "position": data.position,
         "hard-skills": hardskills,
         "soft-skills": softskills,
@@ -98,9 +102,9 @@ function getReportObject(form) {
         "summary-result": data.summary_result,
         "level": data.level,
         "verdict": data.verdict,
-        "verdict-why": data.verdict_why
+        "verdict_why": data.verdict_why
     };
-
+console.log(report)
     return {
         report: report
     };
