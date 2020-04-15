@@ -104,7 +104,7 @@ function getReportObject(form) {
         "verdict": data.verdict,
         "verdict_why": data.verdict_why
     };
-console.log(report)
+    
     return {
         report: report
     };
