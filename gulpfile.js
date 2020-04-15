@@ -24,6 +24,9 @@ function scripts(cb) {
     src('node_modules/bootstrap/dist/js/bootstrap.bundle.min.js')
         .pipe(dest('assets/build'));
 
+    src('assets/js/form-validation.js')
+        .pipe(dest('assets/build'));
+
     cb();
 }
   
