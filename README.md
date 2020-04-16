@@ -27,7 +27,7 @@ $ yarn serve
 ## Todo
 
 - [x] Autosize for textarea
-- [ ] Create publish comand for generating static vesion in `docs/` forlder
+- [x] ~~Create publish comand for generating static vesion in `docs/` forlder~~ at now gh-pages work from root of repo
 - [ ] Add browsersync and autoreload
 - [x] Add `serve` method and remove `web-server.sh`
 - [ ] Make form dynamic
