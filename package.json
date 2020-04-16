@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "autosize": "^4.0.2",
     "bootstrap": "^4.4.1",
     "browserify": "^16.5.1",
     "form-storage": "^1.3.3",

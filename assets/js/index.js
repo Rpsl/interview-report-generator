@@ -1,5 +1,6 @@
 const FormStorage = require('form-storage');
 const Handlebars = require("handlebars");
+const autosize = require('autosize');
 
 $(document).ready(function () {
     var storage = new FormStorage('.js-form-storage', {
@@ -39,6 +40,8 @@ $(document).ready(function () {
             setTimeout(function(){window.location = "";}, 1000);
         }
     });
+
+    autosize($('textarea'));
 });
 
 function getReportObject(form) {
