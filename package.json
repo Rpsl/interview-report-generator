@@ -17,6 +17,7 @@
     "serve": "node_modules/.bin/serve -n -l 8000"
   },
   "devDependencies": {
+    "gulp-clean-dir": "^1.0.2",
     "serve": "^11.3.0"
   }
 }

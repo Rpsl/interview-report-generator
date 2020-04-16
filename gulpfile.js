@@ -1,19 +1,31 @@
-const { parallel,dest,src } = require('gulp');
+const {
+    series,
+    parallel,
+    del,
+    dest,
+    src
+} = require('gulp');
 
+const cleanDir = require('gulp-clean-dir');
 
 var browserify = require('browserify')
 var source = require('vinyl-source-stream')
 var buffer = require('vinyl-buffer')
 
+function clean(cb) {
+    cleanDir('assets/build/');
+    cb();
+}
+
 function scripts(cb) {
     browserify({
-        entries: 'assets/js/index.js',
-        debug: false
-    })
-    .bundle()
-    .pipe(source('build.js'))
-    .pipe(buffer())
-    .pipe(dest('assets/build/'));
+            entries: 'assets/js/index.js',
+            debug: false
+        })
+        .bundle()
+        .pipe(source('build.js'))
+        .pipe(buffer())
+        .pipe(dest('assets/build/'));
 
     src('node_modules/jquery/dist/jquery.slim.min.js')
         .pipe(dest('assets/build'));
@@ -29,8 +41,8 @@ function scripts(cb) {
 
     cb();
 }
-  
-function styles(cb){
+
+function styles(cb) {
     src('node_modules/github-markdown-css/github-markdown.css')
         .pipe(dest('assets/build/'));
 
@@ -39,9 +51,9 @@ function styles(cb){
 
     src('assets/styles/*.css')
         .pipe(dest('assets/build'));
-    
+
     cb();
 }
 
 
-exports.default = parallel(styles, scripts);
+exports.default = series(clean, parallel(styles, scripts));
