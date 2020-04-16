@@ -10,8 +10,22 @@
   - Страница работает в браузере и не требует backend
   - Данные формы сохраняются в localstorage браузера
 
-
 [--> Форма <---](https://rpsl.github.io/interview-report-generator/)
+
+## how it works?
+
+- We have html page with static form
+- Also we have `handlebars` template for pdf like page
+- When we submit form, data from form compiled by `handelbars` into html, opens a new page and calls the print method
+
+```javascript
+function openPrintPage(content) {
+    var printWindow = window.open('', '', 'height=400,width=800');
+    printWindow.document.write(content);
+    printWindow.document.close();
+    printWindow.print();
+}
+```
 
 ---
 
