@@ -29,7 +29,7 @@ function openPrintPage(content) {
 
 ---
 
-## Development
+## development
 
 ```javascript
 $ yarn install
@@ -38,7 +38,7 @@ $ yarn build
 $ yarn serve
 ```
 
-## Todo
+## todo
 
 - [x] Autosize for textarea
 - [x] ~~Create publish comand for generating static vesion in `docs/` forlder~~ at now gh-pages work from root of repo
