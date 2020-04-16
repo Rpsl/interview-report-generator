@@ -13,6 +13,10 @@
     "vinyl-source-stream": "^2.0.0"
   },
   "scripts": {
-    "build": "node_modules/.bin/gulp"
+    "build": "node_modules/.bin/gulp",
+    "serve": "node_modules/.bin/serve -n -l 8000"
+  },
+  "devDependencies": {
+    "serve": "^11.3.0"
   }
 }

@@ -19,7 +19,9 @@
 
 ```javascript
 $ yarn install
-$ yand build
+$ yarn build
+
+$ yarn serve
 ```
 
 ## Todo
@@ -27,5 +29,5 @@ $ yand build
 - [x] Autosize for textarea
 - [ ] Create publish comand for generating static vesion in `docs/` forlder
 - [ ] Add browsersync and autoreload
-- [ ] Add `serve` method and remove `web-server.sh`
+- [x] Add `serve` method and remove `web-server.sh`
 - [ ] Make form dynamic
