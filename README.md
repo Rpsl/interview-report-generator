@@ -27,7 +27,6 @@ function openPrintPage(content) {
 }
 ```
 
----
 
 ## development
 
