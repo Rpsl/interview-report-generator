@@ -1,7 +1,6 @@
 const {
     series,
     parallel,
-    del,
     dest,
     src
 } = require('gulp');
@@ -27,33 +26,21 @@ function scripts(cb) {
         .pipe(buffer())
         .pipe(dest('assets/build/'));
 
-    src('node_modules/jquery/dist/jquery.slim.min.js')
-        .pipe(dest('assets/build'));
-
-    src('node_modules/jquery-serializetojson/dist/jquery.serializeToJSON.min.js')
-        .pipe(dest('assets/build'));
-
-    src('node_modules/bootstrap/dist/js/bootstrap.bundle.min.js')
-        .pipe(dest('assets/build'));
-
-    src('assets/js/form-validation.js')
+    src([
+            'node_modules/jquery/dist/jquery.slim.min.js',
+            'node_modules/jquery-serializetojson/dist/jquery.serializeToJSON.min.js',
+            'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js'
+        ])
         .pipe(dest('assets/build'));
 
     cb();
 }
 
 function styles(cb) {
-    src('node_modules/github-markdown-css/github-markdown.css')
+    src(['node_modules/github-markdown-css/github-markdown.css', 'node_modules/bootstrap/dist/css/bootstrap.min.css'])
         .pipe(dest('assets/build/'));
-
-    src('node_modules/bootstrap/dist/css/bootstrap.min.css')
-        .pipe(dest('assets/build/'));
-
-    src('assets/styles/*.css')
-        .pipe(dest('assets/build'));
 
     cb();
 }
-
 
 exports.default = series(clean, parallel(styles, scripts));

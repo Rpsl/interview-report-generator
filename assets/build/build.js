@@ -18,9 +18,11 @@ $(document).ready(function () {
         e.preventDefault();
         e.stopPropagation();
 
-        if ($(this).get(0).reportValidity() === false) {
+        $(this).addClass('was-validated');
+
+        if ($(this).get(0).checkValidity() === false) {
             return;
-        }
+        } 
 
         var report = getReportObject($(this));
 

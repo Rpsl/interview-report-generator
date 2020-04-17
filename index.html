@@ -405,7 +405,7 @@
 
                    
                     <hr class="mb-4">
-                    <button class="btn btn-primary btn-lg btn-block" type="submit">Generate PDF</button>
+                    <button class="btn btn-primary btn-lg btn-block" type="submit">Print to PDF</button>
                 </form>
             </div>
         </div>
@@ -443,7 +443,7 @@
                     <h3>Hard Skills:</h3>
                     
                     {{#each report.hard-skills}}
-                        <p><strong>Что проверял:</strong> {{this.what}} {{#if this.positive}}🟢{{/if}}{{#if this.negative}}🔴{{/if}}</p>
+                        <p><strong>Что проверял:</strong> {{this.what}} {{#if this.positive}}✅{{/if}}{{#if this.negative}}❌{{/if}}</p>
                         <p><strong>Как проверял:</strong></p>
                         <p style="padding-left: 2em;">{{this.how}}</p>
                     {{/each}}
@@ -451,7 +451,7 @@
                     <h3>Soft Skills:</h3>
                     
                     {{#each report.soft-skills}}
-                        <p><strong>Что проверял:</strong> {{this.what}} {{#if this.positive}}🟢{{/if}}{{#if this.negative}}🔴{{/if}}</p>
+                        <p><strong>Что проверял:</strong> {{this.what}} {{#if this.positive}}✅{{/if}}{{#if this.negative}}❌{{/if}}</p>
                         <p><strong>Как проверял:</strong></p>
                         <p style="padding-left: 2em;">{{this.how}}</p>
                     {{/each}}
@@ -471,7 +471,6 @@
     <script type="text/javascript" src="assets/build/jquery.slim.min.js"></script>
     <script type="text/javascript" src="assets/build/jquery.serializeToJSON.min.js"></script>
     <script type="text/javascript" src="assets/build/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript" src="assets/build/form-validation.js"></script>
 
     <script src="assets/build/build.js"></script>
 </body>
