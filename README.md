@@ -1,5 +1,7 @@
 <p align="center">
-  <img width="96" height="96" src="https://github.com/Rpsl/interview-report-generator/blob/master/assets/favicon.ico/android-icon-192x192.png?raw=true">
+  <a href="https://rpsl.github.io/interview-report-generator/">
+    <img width="96" height="96" src="https://github.com/Rpsl/interview-report-generator/blob/master/assets/favicon.ico/android-icon-192x192.png?raw=true">
+  </a>
 </p>
 
 # Interview report generator
