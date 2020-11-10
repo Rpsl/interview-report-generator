@@ -10,7 +10,8 @@
     "jquery": "^3.5.0",
     "jquery-serializetojson": "^1.4.1",
     "vinyl-buffer": "^1.0.1",
-    "vinyl-source-stream": "^2.0.0"
+    "vinyl-source-stream": "^2.0.0",
+    "yargs-parser": "^13.1.2"
   },
   "scripts": {
     "build": "node_modules/.bin/gulp",
